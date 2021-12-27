@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,18 +117,24 @@
       
     <h2 class="whatwedo__title">Чем мы занимаемся</h2>
       <ul class="whatwedo__list container-main">
-        <li class="whatwedo__item"><img width="370" height="294" src="./images/whatwedo/img1.jpg" alt="Компьютер">
+              <li class="whatwedo__item">
+              <img srcset="./images/1x2x/Whatwedo/box1-1x-d.jpg 1x,
+                ./images/1x2x/Whatwedo/box1-2x-d.jpg 2x," src="./images/1x2x/Whatwedo/box1-1x-d.jpg"
+    alt="Печатает на клавиатуре"/>
           <h3 class="whatwedo__blocktitle">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h3>
           </li>
-        
-        
-          <li class="whatwedo__item"><img width="370" height="294" src="./images/whatwedo/img2.jpg" alt="Компьютер">
-            <h3 class="whatwedo__blocktitle">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3>
-            </li>
-
-          <li class="whatwedo__item"><img width="370" height="294" src="./images/whatwedo/img3.jpg" alt="Компьютер">
-            <h3 class="whatwedo__blocktitle">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
-            </li>
+              <li class="whatwedo__item">
+              <img srcset="./images/1x2x/Whatwedo/box2-1x-d.jpg 1x,
+                ./images/1x2x/Whatwedo/box2-2x-d.jpg 2x," src="./images/1x2x/Whatwedo/box2-1x-d.jpg"
+                alt="Телефон в руке"/>
+          <h3 class="whatwedo__blocktitle">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3>
+          </li>
+              <li class="whatwedo__item">
+              <img srcset="./images/1x2x/Whatwedo/box3-1x-d.jpg 1x,
+                ./images/1x2x/Whatwedo/box3-2x-d.jpg 2x," src="./images/1x2x/Whatwedo/box3-1x-d.jpg"
+                alt="Планшет в руке"/>
+          <h3 class="whatwedo__blocktitle">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
+          </li>
 
             </ul> 
         </section> 
@@ -140,8 +146,21 @@
         <h2 class="comand__title">Наша команда</h2>
           <ul class="comands container-main">
 
-          <li class="comand__item"><img class="img" width="270" height="260" src="./images/comand/img1.jpg" alt="Игорь Демьяненко дизайнер">
-          <div class="professions">
+          <li class="comand__item">
+            <picture>
+            <source srcset="./images/1x2x/OurComand/Desktop/igor-1x-d.jpg 1x,
+                        ./images/1x2x/OurComand/Desktop/igor-2x-d.jpg 2x" media="(min-width:1200px)">
+            
+                        <source srcset="./images/1x2x/OurComand/Tablet/igor1x-tab.jpg 1x,
+                          ./images/1x2x/OurComand/Tablet/igor2x-tab.jpg 2x" media="(min-width:768px)">
+            
+                          <source srcset="./images/1x2x/OurComand/Mobile/igor1xmob.jpg 1x,
+                            ./images/1x2x/OurComand/Mobile/igor2xmob.jpg 2x" media="(min-width:320px)">
+                        <img src="./images/1x2x/OurComand/Desktop/igor-1x-d.jpg"
+              alt="Игорь Демьяненко"/>
+            </picture>
+          
+            <div class="professions">
             <h3 class="professions__name">Игорь Демьяненко</h3>
           <p class="professions__item">Product Designer</p>
           <ul class="sociallist">
