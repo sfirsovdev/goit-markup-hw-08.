@@ -6,8 +6,47 @@
   justify-content: center;
 }
 
+.portfolio {
+  padding-top: 45px;
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 64px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+  }
+}
+
+.portfoliobutton {
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 20px;
+  }
+}
+
+.portfoliobutton__item {
+  padding-top: 15px;
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+  }
+}
+
 .portfoliobutton__item + .portfoliobutton__item {
   padding-left: 8px;
+}
+
+.portfoliobutton__item:nth-child(3n + 4) {
+  padding-left: 0;
+  @media screen and (min-width: 768px) {
+    padding-left: 8px;
+  }
 }
 
 .portfoliobutton__button {

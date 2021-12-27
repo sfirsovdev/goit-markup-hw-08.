@@ -1,10 +1,21 @@
 .footer {
   display: flex;
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 .footer .container {
   display: block;
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
   }
 }
 
@@ -21,11 +32,22 @@
 }
 
 .footerform {
-  display: inline;
+  margin-top: 60px;
   padding-top: 12px;
-  padding-left: 93px;
   @media screen and (min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
     display: block;
+    width: auto;
+    max-width: none;
+    padding-left: 93px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0px;
   }
 }
 
@@ -34,7 +56,13 @@
   flex-wrap: wrap;
   text-align: center;
   @media screen and (min-width: 768px) {
-    text-align: inherit;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+    flex-direction: row;
+    align-items: flex-start;
   }
 }
 
@@ -85,19 +113,25 @@
 }
 
 .footeradress {
+  width: 231px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: 231px;
   flex-shrink: 0;
   @media screen and (min-width: 768px) {
+    width: 50%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 231px;
     margin-left: 0;
     margin-right: 0;
     text-align: left;
   }
 }
 
-.footerform___icon {
+.formfooter__icon {
   margin-left: 10px;
 }
 
@@ -119,6 +153,10 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1200px) {
     width: 358px;
+    margin-bottom: 0;
   }
 }

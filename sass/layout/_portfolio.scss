@@ -24,16 +24,20 @@
 .pborder {
   padding: 20px 24px;
   border: solid 1px var(--border-portfolio-cards);
+  @media screen and (min-width: 768px) {
+    flex-grow: +1;
+  }
 }
 
 .cards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .cards__text {
   position: absolute;
-  top: 0;
+  top: 90px;
   left: 0;
   font-family: roboto;
   font-weight: 400;
@@ -48,15 +52,31 @@
   .cards__item:hover & {
     transform: translateY(0);
   }
+  @media screen and (min-width: 768px) {
+    top: 0;
+  }
 }
 
 .cards__item {
-  margin-right: 30px;
-  margin-bottom: 30px;
+  width: 100%;
+  padding-top: 30px;
   transition: box-shadow 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 15px);
+  }
+  @media screen and (min-width: 1200px) {
+    width: auto;
+  }
   img {
     display: block;
+    width: 100%;
+    height: auto;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
     &:hover,
     &:focus {
       cursor: pointer;

@@ -9,8 +9,14 @@
   padding-left: 0;
   text-align: center;
   @media screen and (min-width: 768px) {
+    width: 50%;
+    padding-top: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    width: auto;
+    padding-top: 12px;
     padding-left: 70px;
-    text-align: initial;
+    text-align: left;
   }
 }
 
