@@ -179,12 +179,13 @@ picture img {
 }
 
 .modal {
+  max-width: 95%;
   width: 528px;
   min-height: 581px;
   background-color: var(--text-color);
   border-radius: 5px;
   position: fixed;
-  top: 50%;
+  top: 67%;
   left: 50%;
   transform: scale(1) rotate(0) translate(-50%, -50%);
   transition: transform 250ms;
@@ -193,6 +194,13 @@ picture img {
 
 .backdrop.is-hidden .modal {
   transform: scale(1.5) rotate(270deg);
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    max-width: 100%;
+    top: 50%;
+  }
 }
 
 .modal__close {
@@ -229,16 +237,24 @@ picture img {
 }
 
 .modalform {
-  padding-top: 46px;
-  padding-left: 41px;
-  padding-right: 39px;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .modalform {
+    padding-top: 46px;
+    padding-left: 41px;
+    padding-right: 39px;
+  }
 }
 
 .modalform__title {
   padding-bottom: 12px;
   font-weight: bold;
   font-size: 20px;
-  line-height: 1.2px;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
   text-align: center;
@@ -329,9 +345,15 @@ textarea::placeholder {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .modalchecktext {
+    font-size: 14px;
+  }
 }
 
 .modalchecktext::before {
@@ -381,6 +403,7 @@ textarea::placeholder {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
   border: none;
   border-radius: 4px;
   width: 200px;
