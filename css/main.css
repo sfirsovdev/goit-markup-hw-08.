@@ -187,6 +187,7 @@ picture img {
   position: fixed;
   top: 52%;
   left: 50%;
+  overflow-y: scroll;
   transform: scale(1) rotate(0) translate(-50%, -50%);
   transition: transform 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -736,7 +737,7 @@ textarea::placeholder {
   margin-right: auto;
   max-width: 1600px;
   background-color: #c4c4c4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/bg_img.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/Header-m.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -744,7 +745,13 @@ textarea::placeholder {
 
 @media screen and (min-width: 768px) {
   .hero {
-    padding: 200px 0;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/Header-t.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/Header-d.jpg);
   }
 }
 

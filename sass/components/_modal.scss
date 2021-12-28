@@ -18,6 +18,7 @@
   position: fixed;
   top: 52%;
   left: 50%;
+  overflow-y: scroll;
 
   transform: scale(1) rotate(0) translate(-50%, -50%);
   transition: transform 250ms;
