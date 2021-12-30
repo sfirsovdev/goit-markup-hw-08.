@@ -57,7 +57,9 @@
 .open-menu-btn {
   background: none;
   border-color: transparent;
-
+  border: none;
+  padding: 0;
+  margin-right: 8px;
   margin-left: auto;
   @media screen and (min-width: 768px) {
     display: none;
@@ -75,19 +77,22 @@
 }
 
 .menu-icon {
-  width: 15px;
-  height: 15px;
+  width: 24px;
+  height: 16px;
 }
 
 .menu-iconclose {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
 }
 
 .close-menu-btn {
   margin-top: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding: 0 10px;
   background: none;
-  border-color: transparent;
+  border: none;
   display: block;
   margin-left: auto;
   transition: color 250ms linear, border-color 250ms;
@@ -108,6 +113,7 @@
   height: 100vh;
   z-index: 999;
   padding-top: 21px;
+  padding-bottom: 48px;
   padding-left: 40px;
   padding-right: 15px;
   background-color: #ffffff;
@@ -121,12 +127,21 @@
     z-index: 5;
   }
   &.is-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .mobmenu__item {
   padding-bottom: 32px;
+}
+
+.mob-menu-top {
+  margin-top: 0;
+}
+
+.mob-menu-bottom {
+  margin-top: auto;
 }
 
 .mobmenu__link {
@@ -142,19 +157,23 @@
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
 }
 
-.bottom {
-  display: flex;
-  flex-direction: column;
+.contmobmenu__item {
+  margin-top: 32px;
 }
 
 .socialmobmenu {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 64px;
 }
 
 .socialmobmenu__link {
@@ -167,7 +186,18 @@
   padding-left: 10px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
+}
+
+.socialmobmenu__item {
   border-right: solid #757575 1px;
+  &:first-child {
+    .socialmobmenu__link {
+      padding-left: 0;
+    }
+  }
+  &:last-child {
+    border-right: none;
+  }
 }
 
 .phonemobmenu {
@@ -176,6 +206,7 @@
   line-height: 1.18;
   letter-spacing: 0.02em;
   padding-left: 0;
+  margin-bottom: 32px;
   color: #757575;
   text-decoration: none;
   transition: color 250ms linear, border-color 250ms;

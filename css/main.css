@@ -170,7 +170,7 @@ picture img {
 .backdrop {
   overflow-y: auto;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   background-color: rgba(23, 26, 36, 0.2);
   position: fixed;
   top: 0;
@@ -180,7 +180,7 @@ picture img {
 }
 
 .modal {
-  width: 450px;
+  width: calc(100% - 30px);
   min-height: 581px;
   background-color: var(--text-color);
   border-radius: 5px;
@@ -233,6 +233,7 @@ picture img {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  position: absolute;
 }
 
 .modalform {
@@ -341,10 +342,10 @@ textarea::placeholder {
 }
 
 .modalchecktext {
+  display: block;
   margin-top: 8px;
   margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   font-size: 12px;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
@@ -362,7 +363,7 @@ textarea::placeholder {
   height: 15px;
   border: solid 2px #000000;
   margin-right: 5px;
-  display: block;
+  display: inline-block;
   border-radius: 2px;
 }
 
@@ -658,6 +659,9 @@ textarea::placeholder {
 .open-menu-btn {
   background: none;
   border-color: transparent;
+  border: none;
+  padding: 0;
+  margin-right: 8px;
   margin-left: auto;
 }
 
@@ -680,19 +684,22 @@ textarea::placeholder {
 }
 
 .menu-icon {
-  width: 15px;
-  height: 15px;
+  width: 24px;
+  height: 16px;
 }
 
 .menu-iconclose {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
 }
 
 .close-menu-btn {
   margin-top: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding: 0 10px;
   background: none;
-  border-color: transparent;
+  border: none;
   display: block;
   margin-left: auto;
   transition: color 250ms linear, border-color 250ms;
@@ -713,6 +720,7 @@ textarea::placeholder {
   height: 100vh;
   z-index: 999;
   padding-top: 21px;
+  padding-bottom: 48px;
   padding-left: 40px;
   padding-right: 15px;
   background-color: #ffffff;
@@ -731,11 +739,20 @@ textarea::placeholder {
 }
 
 .mob-menu.is-open {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .mobmenu__item {
   padding-bottom: 32px;
+}
+
+.mob-menu-top {
+  margin-top: 0;
+}
+
+.mob-menu-bottom {
+  margin-top: auto;
 }
 
 .mobmenu__link {
@@ -752,19 +769,23 @@ textarea::placeholder {
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
 }
 
-.bottom {
-  display: flex;
-  flex-direction: column;
+.contmobmenu__item {
+  margin-top: 32px;
 }
 
 .socialmobmenu {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 64px;
 }
 
 .socialmobmenu__link {
@@ -777,7 +798,18 @@ textarea::placeholder {
   padding-left: 10px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
+}
+
+.socialmobmenu__item {
   border-right: solid #757575 1px;
+}
+
+.socialmobmenu__item:first-child .socialmobmenu__link {
+  padding-left: 0;
+}
+
+.socialmobmenu__item:last-child {
+  border-right: none;
 }
 
 .phonemobmenu {
@@ -786,6 +818,7 @@ textarea::placeholder {
   line-height: 1.18;
   letter-spacing: 0.02em;
   padding-left: 0;
+  margin-bottom: 32px;
   color: #757575;
   text-decoration: none;
   transition: color 250ms linear, border-color 250ms;
@@ -920,21 +953,39 @@ textarea::placeholder {
   margin-right: auto;
   max-width: 1600px;
   background-color: #c4c4c4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/Header-m.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/Header-1x-m.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-@media screen and (min-width: 768px) {
+@media not all, screen and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/Header-t.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/Header-2x-m.jpg);
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media not all, screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/Header-d.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/Header-1x-t.jpg);
+  }
+}
+
+@media not all, screen and (min-width: 768px) and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/Header-2x-t.jpg);
+  }
+}
+
+@media not all, screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/Header-1x-d.jpg);
+  }
+}
+
+@media not all, screen and (min-width: 1200px) and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/Header-2x-d.jpg);
   }
 }
 
