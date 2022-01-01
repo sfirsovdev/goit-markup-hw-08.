@@ -51,7 +51,7 @@ ul {
   padding-bottom: 60px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -72,6 +72,24 @@ picture img {
   padding-right: 15px;
   width: 100%;
   max-width: 1200px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -442,13 +460,14 @@ textarea::placeholder {
 @media screen and (min-width: 768px) {
   .portfolio {
     padding-top: 60px;
-    padding-bottom: 64px;
+    padding-bottom: 60px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .portfolio {
     padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -979,6 +998,7 @@ textarea::placeholder {
 
 @media not all, screen and (min-width: 1200px) {
   .hero {
+    padding: 200px 0;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/Header-1x-d.jpg);
   }
 }
@@ -1039,13 +1059,14 @@ textarea::placeholder {
 
 @media screen and (min-width: 768px) {
   .section-advantages {
-    padding-top: 30px;
+    padding-top: 60px;
     margin-bottom: 60px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .section-advantages {
+    padding-top: 94px;
     margin-bottom: 0;
   }
 }
@@ -1057,14 +1078,19 @@ textarea::placeholder {
 
 @media screen and (min-width: 768px) {
   .advantages__item {
+    padding-top: 0;
     width: calc(50% - 15px);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .advantages__item {
+    margin-left: 30px;
     padding-bottom: 0;
     width: calc(25% - 15px);
+  }
+  .advantages__item:first-child {
+    margin-left: 0;
   }
 }
 
@@ -1076,6 +1102,13 @@ textarea::placeholder {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 
 .advantages__title {
@@ -1123,11 +1156,13 @@ textarea::placeholder {
 
 @media screen and (min-width: 1200px) {
   .whatwedo.section {
+    width: 100%;
     display: inline-block;
   }
 }
 
 .whatwedo__title {
+  padding: top 94px;
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -1164,15 +1199,7 @@ textarea::placeholder {
 }
 
 .comand {
-  margin-top: 60px;
   background-color: var(--section-color);
-}
-
-@media screen and (min-width: 768px) {
-  .comand {
-    padding-top: 60px;
-    padding-bottom: 30px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1192,7 +1219,6 @@ textarea::placeholder {
 
 @media screen and (min-width: 768px) {
   .comand__title {
-    padding-bottom: 30px;
     font-size: 28px;
     line-height: 1.7;
   }
@@ -1202,7 +1228,7 @@ textarea::placeholder {
   .comand__title {
     font-size: 36px;
     line-height: 1.7;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 }
 
@@ -1238,22 +1264,40 @@ textarea::placeholder {
 @media screen and (min-width: 768px) {
   .comand__item {
     width: calc(50% - 15px);
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .comand__item:first-child {
+    margin-left: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .comand__item {
+    margin-left: 30px;
     width: calc(25% - 15px);
     margin-top: 0;
   }
 }
 
 .comands {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .comands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comands {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 
 .comand__item .img {
@@ -1314,15 +1358,16 @@ textarea::placeholder {
 
 @media screen and (min-width: 768px) {
   .сlients__title {
+    padding-bottom: 0;
     padding-top: 60px;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .сlients__title {
     padding-top: 94px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     font-size: 36px;
   }
 }
@@ -1331,7 +1376,7 @@ textarea::placeholder {
   flex-wrap: wrap;
   display: flex;
   margin-bottom: 45px;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -1354,7 +1399,11 @@ textarea::placeholder {
 
 @media screen and (min-width: 768px) {
   .clients__item {
+    padding-right: 30px;
     width: calc(100% / 3 - 15px);
+  }
+  .clients__item:last-child {
+    padding-right: 0;
   }
 }
 

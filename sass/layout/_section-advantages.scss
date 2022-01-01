@@ -1,10 +1,11 @@
 .section-advantages {
   padding-bottom: 0;
   @media screen and (min-width: 768px) {
-    padding-top: 30px;
+    padding-top: 60px;
     margin-bottom: 60px;
   }
   @media screen and (min-width: 1200px) {
+    padding-top: 94px;
     margin-bottom: 0;
   }
 }
@@ -13,12 +14,16 @@
   padding-top: 30px;
   width: 100%;
   @media screen and (min-width: 768px) {
-    // padding-bottom: 30px;
+    padding-top: 0;
     width: calc(50% - 15px);
   }
   @media screen and (min-width: 1200px) {
+    margin-left: 30px;
     padding-bottom: 0;
     width: calc(25% - 15px);
+    &:first-child {
+      margin-left: 0;
+    }
   }
 
   &:last-child {
@@ -30,6 +35,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 
 .advantages__title {
