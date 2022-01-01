@@ -1055,12 +1055,12 @@ textarea::placeholder {
 
 .section-advantages {
   padding-bottom: 0;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .section-advantages {
     padding-top: 60px;
-    margin-bottom: 60px;
   }
 }
 
@@ -1072,13 +1072,12 @@ textarea::placeholder {
 }
 
 .advantages__item {
-  padding-top: 30px;
+  padding-bottom: 30px;
   width: 100%;
 }
 
 @media screen and (min-width: 768px) {
   .advantages__item {
-    padding-top: 0;
     width: calc(50% - 15px);
   }
 }
@@ -1092,10 +1091,6 @@ textarea::placeholder {
   .advantages__item:first-child {
     margin-left: 0;
   }
-}
-
-.advantages__item:last-child {
-  padding-bottom: 0;
 }
 
 .advantages {
@@ -1346,7 +1341,7 @@ textarea::placeholder {
 
 .сlients__title {
   margin-top: 0;
-  padding-top: 94px;
+  padding-top: 60px;
   padding-bottom: 30px;
   font-weight: 700;
   font-size: 28px;
@@ -1359,15 +1354,14 @@ textarea::placeholder {
 @media screen and (min-width: 768px) {
   .сlients__title {
     padding-bottom: 0;
-    padding-top: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .сlients__title {
     padding-top: 94px;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     font-size: 36px;
   }
 }
@@ -1376,6 +1370,8 @@ textarea::placeholder {
   flex-wrap: wrap;
   display: flex;
   margin-bottom: 45px;
+  margin-left: -15px;
+  margin-right: -15px;
   justify-content: center;
 }
 
@@ -1387,30 +1383,25 @@ textarea::placeholder {
 
 @media screen and (min-width: 1200px) {
   .clients__list {
-    margin-bottom: 94px;
+    margin-bottom: 79px;
   }
 }
 
 .clients__item {
   height: 92px;
-  width: calc(100% / 2 - 15px);
-  margin: 15px 0;
+  width: calc(100% / 2 - 30px);
+  margin: 15px;
 }
 
 @media screen and (min-width: 768px) {
   .clients__item {
-    padding-right: 30px;
-    width: calc(100% / 3 - 15px);
-  }
-  .clients__item:last-child {
-    padding-right: 0;
+    width: calc(100% / 3 - 30px);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .clients__item {
-    width: calc(100% / 6 - 15px);
-    margin: 0;
+    width: calc(100% / 6 - 30px);
   }
 }
 
