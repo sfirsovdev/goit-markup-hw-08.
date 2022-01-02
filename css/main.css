@@ -76,19 +76,19 @@ picture img {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 100%;
+    width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 100%;
+    width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 100%;
+    width: 1200px;
   }
 }
 
@@ -199,6 +199,7 @@ picture img {
 
 .modal {
   width: calc(100% - 30px);
+  max-width: 450px;
   min-height: 581px;
   background-color: var(--text-color);
   border-radius: 5px;
@@ -216,7 +217,7 @@ picture img {
 
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
+    max-width: 528px;
   }
 }
 
